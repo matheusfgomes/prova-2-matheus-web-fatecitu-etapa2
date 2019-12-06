@@ -17,11 +17,12 @@ import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto
 import { ProdutosComponent } from './produtos/produtos.component';
 
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
+import { ListProdutoComponent } from './list-produto/list-produto.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule ],
 
-  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent, ProdutosComponent,  ProdutoDetalhesComponent ],
+  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent, ProdutosComponent,  ProdutoDetalhesComponent, ListProdutoComponent ],
 
   bootstrap:    [ AppComponent ],
 
