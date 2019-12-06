@@ -14,7 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from './environments/environment';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+
 
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
 import { ListProdutoComponent } from './list-produto/list-produto.component';
@@ -22,7 +22,7 @@ import { ListProdutoComponent } from './list-produto/list-produto.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule ],
 
-  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent, ProdutosComponent,  ProdutoDetalhesComponent, ListProdutoComponent ],
+  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent,   ProdutoDetalhesComponent, ListProdutoComponent ],
 
   bootstrap:    [ AppComponent ],
 
