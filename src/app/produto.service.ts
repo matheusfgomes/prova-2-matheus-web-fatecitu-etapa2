@@ -9,16 +9,25 @@ import { PRODUTOS } from './mock-produtos';
 @Injectable({ providedIn: 'root'})
 export class ProdutoService {
 
-  constructor(private mensagemService: MensagemService) { }
+  constructor(private db: AngularFireDatabase) { }
 
-  getProdutos(): Observable<Produto[]> {
-    this.mensagemService.add('Listando Produtos');
-    return of(PRODUTOS);
+  sert(produto: Produto) {
+    
+    this.db.list('produtos').push(produto)
+      .then((result: any) => {
+        console.log(result.key);
+      });
   }
 
-  getProduto(codigo: number): Observable<Produto> {
-    this.mensagemService.add('Código do Produto = ${codigo}');
-    return of(PRODUTOS.find(produto => produto.codigo === codigo));
+
+  getAll() {
+    return this.db.list('produtos')
+      .snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+        })
+      );
   }
 
 }

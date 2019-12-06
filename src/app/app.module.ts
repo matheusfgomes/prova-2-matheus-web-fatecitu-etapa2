@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 
 import { ProdutoService } from './produto.service';
-import { ProdutoMensagensComponent } from './produto-mensagens/produto-mensagens.component';
+
 
 
 //Firebase
@@ -22,10 +22,10 @@ import { ListProdutoComponent } from './list-produto/list-produto.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule ],
 
-  declarations: [ AppComponent, HelloComponent, ProdutoMensagensComponent, CadastrarProdutoComponent,   ListProdutoComponent ],
+  declarations: [ AppComponent, HelloComponent,  CadastrarProdutoComponent,   ListProdutoComponent ],
 
   bootstrap:    [ AppComponent ],
 
-  providers: [ProdutoService, MensagemService]
+  providers: [ProdutoService]
 })
 export class AppModule { }
