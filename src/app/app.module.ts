@@ -16,13 +16,13 @@ import { environment } from './environments/environment';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
 
 
-import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
+
 import { ListProdutoComponent } from './list-produto/list-produto.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule ],
 
-  declarations: [ AppComponent, HelloComponent, ProdutoMensagensComponent, CadastrarProdutoComponent,   ProdutoDetalhesComponent, ListProdutoComponent ],
+  declarations: [ AppComponent, HelloComponent, ProdutoMensagensComponent, CadastrarProdutoComponent,   ListProdutoComponent ],
 
   bootstrap:    [ AppComponent ],
 
