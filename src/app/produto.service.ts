@@ -4,7 +4,7 @@ import {Observable, of} from 'rxjs';
 
 import { Produto } from './produto';
 import { PRODUTOS } from './mock-produtos';
-import { MensagemService } from './mensagem.service';
+
 
 @Injectable({ providedIn: 'root'})
 export class ProdutoService {
