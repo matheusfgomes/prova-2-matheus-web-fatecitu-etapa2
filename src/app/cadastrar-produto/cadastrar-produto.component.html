@@ -1,0 +1,21 @@
+<div>
+<label>Código:
+<input #codigo />
+</label>
+<br>
+<label>Descrição:
+<input #descricao />
+</label>
+<br>
+<!-- <label>Valor:
+<input #valor />
+</label>
+<br>
+<label>Fornecedor:
+<input #fornecedor />
+</label>
+<br> -->
+<button (click)="salvar(codigo.value,descricao.value, valor.value, fornecedor.value); codigo.value=''; descricao.value=' '; valor=''; fornecedor=''">
+Salvar
+</button>
+</div>
