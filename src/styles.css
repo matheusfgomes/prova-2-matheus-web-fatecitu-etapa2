@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+
+h1{
+  color: rgb(18, 93, 95);
+  text-shadow: 2px 2px 5px;
+}
+body{
+  background-color: rgba(207, 184, 175, 0.932); 
+}
