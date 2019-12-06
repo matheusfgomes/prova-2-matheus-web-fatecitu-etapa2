@@ -15,13 +15,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from './environments/environment';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
 import { ProdutosComponent } from './produtos/produtos.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AngularFireModule.initializeApp(environment.firebase), AngularFireDatabaseModule ],
 
-  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent, ProdutosComponent, DashboardComponent, ProdutoDetalhesComponent ],
+  declarations: [ AppComponent, HelloComponent, ProdutoComponent, ProdutoMensagensComponent, CadastrarProdutoComponent, ProdutosComponent,  ProdutoDetalhesComponent ],
 
   bootstrap:    [ AppComponent ],
 

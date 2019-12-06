@@ -2,7 +2,7 @@
 
 <ul class="produtos">
   <li *ngFor="let produto of produtos">
-    <a routerLink="/detalhes/{{produto.codigo}}">
+    <a>
     <span class="badge">{{produto.codigo}}</span> - {{produto.descricao}} - {{produto.valor}} - {{produto.fornecedor}} 
     </a>
   </li>
