@@ -1,0 +1,12 @@
+<h2>Produtos</h2>
+
+<ul class="produtos">
+  <li *ngFor="let produto of produtos">
+    <a routerLink="/detalhes/{{produto.codigo}}">
+    <span class="badge">{{produto.codigo}}</span> - {{produto.descricao}} - {{produto.valor}} - {{produto.fornecedor}} 
+    </a>
+  </li>
+</ul>
+
+<p><b>RA: 11010</b></p><br>
+<p><b>Nome: Matheus Figueiredo Gomes</b></p>

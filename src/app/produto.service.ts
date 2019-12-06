@@ -1,4 +1,32 @@
 import { Injectable } from '@angular/core';
+
+import {Observable, of} from 'rxjs';
+
+import { Produto } from './produto';
+import { PRODUTOS } from './mock-produtos';
+import { MensagemService } from './mensagem.service';
+
+@Injectable({ providedIn: 'root'})
+export class ProdutoService {
+
+  constructor(private mensagemService: MensagemService) { }
+
+  getProdutos(): Observable<Produto[]> {
+    this.mensagemService.add('Listando Produtos');
+    return of(PRODUTOS);
+  }
+
+  getProduto(codigo: number): Observable<Produto> {
+    this.mensagemService.add('Código do Produto = ${codigo}');
+    return of(PRODUTOS.find(produto => produto.codigo === codigo));
+  }
+
+}
+
+
+
+
+/*import { Injectable } from '@angular/core';
 import { Produto } from './produto';
 import { Produto } from './mock-produtos';
 import { Observable, of } from 'rxjs';
@@ -40,5 +68,6 @@ console.log(result.key)
   //     this.mensagemService.add('ProdutoService: produto selecionado');
   //     return of (PRODUTOS);
   // }
+  
+  */
 
-}
